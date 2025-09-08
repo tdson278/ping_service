@@ -8,6 +8,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY .
+COPY . /app
 
 CMD ["sh", "-c", "uvicorn ping_flowise:app --host 0.0.0.0 --port ${PORT} --reload"]
